@@ -10,19 +10,19 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <!--[if lte IE 8]><asset:javascript src="ie/html5shiv.js"/></script><![endif]-->
-    <asset:javascript src="jquery.min.js"/>
-    <asset:javascript src="jquery.dropotron.min.js"/>
-    <asset:javascript src="skel.min.js"/>
-    <asset:javascript src="skel-layers.min.js"/>
-    <asset:javascript src="init.js"/>
+    <!--[if lte IE 8]><script src="assets/ie/html5shiv.js" type="text/javascript"></script><![endif]-->
+    <script src="assets/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/jquery.dropotron.min.js" type="text/javascript"></script>
+    <script src="assets/skel.min.js" type="text/javascript"></script>
+    <script src="assets/skel-layers.min.js" type="text/javascript"></script>
+    <script src="assets/init.js" type="text/javascript"></script>
     <noscript>
-        <asset:stylesheet src="style-desktop.css"/>
-        <asset:stylesheet src="style.css"/>
-        <asset:stylesheet src="skel.css"/>
+        <link rel="stylesheet" href="assets/style-desktop.css">
+        <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="assets/skel.css">
     </noscript>
 
-    <!--[if lte IE 8]><asset:stylesheet src="ie/v8.css"/><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/ie/v8.css"><![endif]-->
 </head>
 <body class="homepage">
 
