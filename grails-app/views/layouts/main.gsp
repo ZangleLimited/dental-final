@@ -10,19 +10,19 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <!--[if lte IE 8]><script src="assets/ie/html5shiv.js" type="text/javascript"></script><![endif]-->
-    <script src="assets/jquery.min.js" type="text/javascript"></script>
-    <script src="assets/jquery.dropotron.min.js" type="text/javascript"></script>
-    <script src="assets/skel.min.js" type="text/javascript"></script>
-    <script src="assets/skel-layers.min.js" type="text/javascript"></script>
-    <script src="assets/init.js" type="text/javascript"></script>
+    <!--[if lte IE 8]><script src="js/ie/html5shiv.js" type="text/javascript"></script><![endif]-->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.dropotron.min.js" type="text/javascript"></script>
+    <script src="js/skel.min.js" type="text/javascript"></script>
+    <script src="js/skel-layers.min.js" type="text/javascript"></script>
+    <script src="js/init.js" type="text/javascript"></script>
     <noscript>
-        <link rel="stylesheet" href="assets/style-desktop.css">
-        <link rel="stylesheet" href="assets/style.css">
-        <link rel="stylesheet" href="assets/skel.css">
+        <link rel="stylesheet" href="css/style-desktop.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/skel.css">
     </noscript>
 
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/ie/v8.css"><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css"><![endif]-->
 </head>
 <body class="homepage">
 
@@ -31,8 +31,8 @@
     <div id="header" class="container">
 
         <!-- Logo -->
-        <h1 id="logo"><asset:image src="dentistry.png" width="75px" height="75px" style="margin-right: 20px"/><a href="index.html">passdentistry</a></h1>
-        <p>Taking you further...</p>
+        <h1 id="logo"><img src="images/dentistry.png" width="75px" height="75px" style="margin-right: 20px"><a href="index.html">passdentistry</a></h1>
+        <p>Helping you to succeed</p>
 
         <!-- Nav -->
         <nav id="nav">
