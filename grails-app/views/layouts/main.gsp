@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-    <title>Pass Dental</title>
+    <title>Passdentistry</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -41,18 +41,14 @@
                 <li>
                     <a href="" class="icon fa-sitemap"><span>Browse Categories</span></a>
                     <ul>
-                        <li><a href="#">Periodontdogy</a></li>
-                        <li><a href="#">Magna phasellus</a></li>
-                        <li><a href="#">Etiam dolore nisl</a></li>
-                        <li>
-                            <a href="">Phasellus consequat</a>
-                            <ul>
-                                <li><a href="#">Magna phasellus</a></li>
-                                <li><a href="#">Etiam dolore nisl</a></li>
-                                <li><a href="#">Phasellus consequat</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Veroeros feugiat</a></li>
+                        <li><a href="#">Endodontics</a></li>
+                        <li><a href="#">Paediatric Dentistry</a></li>
+                        <li><a href="#">Periodontology</a></li>
+                        <li><a href="#">Prothodontics</a></li>
+                        <li><a href="#">Oral Medicine</a></li>
+                        <li><a href="#">Oral Surgery</a></li>
+                        <li><a href="#">Orthodontics</a></li>
+                        <li><a href="#">Restorative Dentistry</a></li>
                     </ul>
                 </li>
                 <li><a class="icon fa-check-square-o" href="left-sidebar.html"><span>Take an Exam</span></a></li>
@@ -74,22 +70,18 @@
                 <!-- Post -->
                 <article class="box post">
                     <header>
-                        <h2><a href="#">I don’t want to say <strong>it’s the aliens</strong> ...<br />
-                            but it’s the aliens.</a></h2>
+                        <h2><a href="#">We want to help you <strong>succeed</strong> ...<br /></a></h2>
                     </header>
-                    <a href="#" class="image featured"><img src="assets/pic04.jpg" alt="" /></a>
-                    <h3>I mean isn't it possible?</h3>
-                    <p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-                    ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-                    sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-                    in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-                    magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-                    consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-                    justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-                    mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
-                    Curabitur leo nibh, rutrum eu malesuada in, tristique at erat.</p>
+                    %{--<a href="#" class="image featured"><img src="assets/pic04.jpg" alt="" /></a>--}%
+                    <p>Pass dentistry is the first dentistry mock exam site of it's kind for <strong>FREE</strong>. Practice thousands of questions
+                    that are relevant to dentistry students all around the world.</p>
+
+                    <p>
+                        Our Questions will give you fast feedback on how well you are doing. We can track how you are progressing over
+                        time so you can feel confided you are moving towards your goal...
+                    </p>
                     <ul class="actions">
-                        <li><a href="#" class="button icon fa-file">Continue Reading</a></li>
+                        <li><a href="#" class="button icon fa-file">Get Started</a></li>
                     </ul>
                 </article>
 

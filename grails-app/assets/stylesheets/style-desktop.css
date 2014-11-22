@@ -274,7 +274,7 @@
 		.dropotron li:hover > span,
 		.dropotron li:hover > a
 		{
-			color: #0066CC
+			color: #3399FF
 ;
 			-moz-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 			-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;

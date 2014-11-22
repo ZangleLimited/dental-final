@@ -75,14 +75,14 @@
 	
 		a:hover
 		{
-			color: #0066CC
+			color: #3399FF
 ;
 			border-bottom-color: rgba(255,255,255,0);
 		}
 		
 		a:hover strong
 		{
-			color: #0066CC
+			color: #3399FF
 ;
 		}
 
@@ -484,7 +484,7 @@
 			-webkit-appearance: none;
 			position: relative;
 			display: inline-block;
-			background: #0066CC
+			background: #3399FF
 ;
 			color: #fff !important;
 			text-transform: uppercase;
@@ -523,7 +523,7 @@
 			input[type="reset"]:active,
 			.button:active
 			{
-				background: #0066CC
+				background: #3399FF
 ;
 			}
 		
@@ -704,7 +704,7 @@
 		{
 			font-family: 'Arvo';
 			font-weight: 700;
-			color: #0066CC
+			color: #3399FF
 ;
 			text-shadow: 0.05em 0.075em 0 rgba(0,0,0,0.1);
 		}
@@ -785,7 +785,7 @@
 					#nav > ul > li.active > a:before,
 					#nav > ul > li:hover > a:before
 					{
-						background: #0066CC
+						background: #3399FF
 ;
 						color: #fff;
 					}
@@ -793,7 +793,7 @@
 					#nav > ul > li.active > a > span,
 					#nav > ul > li:hover > a > span
 					{
-						color: #0066CC
+						color: #3399FF
 ;
 					}
 
