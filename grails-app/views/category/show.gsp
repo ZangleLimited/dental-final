@@ -32,6 +32,28 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${categoryInstance?.exams}">
+				<li class="fieldcontain">
+					<span id="exams-label" class="property-label"><g:message code="category.exams.label" default="Exams" /></span>
+					
+						<g:each in="${categoryInstance.exams}" var="e">
+						<span class="property-value" aria-labelledby="exams-label"><g:link controller="exam" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${categoryInstance?.questions}">
+				<li class="fieldcontain">
+					<span id="questions-label" class="property-label"><g:message code="category.questions.label" default="Questions" /></span>
+					
+						<g:each in="${categoryInstance.questions}" var="q">
+						<span class="property-value" aria-labelledby="questions-label"><g:link controller="question" action="show" id="${q.id}">${q?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:categoryInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

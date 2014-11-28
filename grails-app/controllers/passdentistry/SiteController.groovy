@@ -6,8 +6,6 @@ import grails.transaction.Transactional
 class SiteController {
 
     def index() {
-        def categories = Category.list()
-        println categories
-        [categories: categories]
+        [categories: Category.list()]
     }
 }

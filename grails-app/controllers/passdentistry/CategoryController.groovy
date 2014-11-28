@@ -1,5 +1,7 @@
 package passdentistry
 
+
+
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -10,7 +12,6 @@ class CategoryController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        println "hi"
         respond Category.list(params), model:[categoryInstanceCount: Category.count()]
     }
 
