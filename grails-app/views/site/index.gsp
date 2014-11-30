@@ -16,7 +16,7 @@
     <div id="header" class="container">
 
         <!-- Logo -->
-        <h1 id="logo"><img src="images/dentistry.png" width="75px" height="75px" style="margin-right: 20px"><a href="index.html">passdentistry</a></h1>
+        <h1 id="logo"><asset:image src="dentistry.png" width="75px" height="75px" style="margin-right: 20px" /><a href="index.html">passdentistry</a></h1>
         <p>Helping you to succeed</p>
 
         <!-- Nav -->
