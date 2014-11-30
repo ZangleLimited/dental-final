@@ -86,6 +86,9 @@ grails.hibernate.pass.readonly = false
 grails.hibernate.osiv.readonly = false
 
 grails.assets.minifyJs=false
+grails.assets.minifyCss=false
+grails.assets.minify=false
+grails.resources.mappers.yuicssminify.disable=true
 
 environments {
     development {
