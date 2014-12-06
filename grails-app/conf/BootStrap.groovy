@@ -1,9 +1,10 @@
-import passdentistry.User
+import passdentistry.Admin
+import passdentistry.Admin
 
 class BootStrap {
 
     def init = { servletContext ->
-        new User(email:"admin@passdentistry.com",password:"password").save()
+        new Admin(email:"admin@passdentistry.com",password:"password").save()
         new passdentistry.Category(name: "Paediatric Dentistry").save()
         new passdentistry.Category(name: "Periodontology").save()
         new passdentistry.Category(name: "Prothodontics").save()

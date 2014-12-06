@@ -13,7 +13,7 @@ class CategoryController {
 
     def checkUser() {
         if(!session.user) {
-            redirect(controller:'user',action:'login')
+            redirect(controller:'admin',action:'login')
             return false
         }
     }

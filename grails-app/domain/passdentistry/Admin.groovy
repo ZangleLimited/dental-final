@@ -1,6 +1,6 @@
 package passdentistry
 
-class User {
+class Admin {
     Long id
     Long version
     String email

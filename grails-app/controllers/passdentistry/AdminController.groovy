@@ -1,6 +1,6 @@
 package passdentistry
 
-class UserController {
+class AdminController {
 
     def index() {}
 
@@ -8,11 +8,11 @@ class UserController {
     }
 
     def doLogin = {
-        def user = User.findWhere(email:params['email'], password:params['password'])
+        def user = Admin.findWhere(email:params['email'], password:params['password'])
         session.user = user
         if (user)
             redirect(controller:'category',action:'index')
         else
-            redirect(controller:'user',action:'login')
+            redirect(controller:'admin',action:'login')
     }
 }
