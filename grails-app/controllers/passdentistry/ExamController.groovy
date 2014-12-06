@@ -7,6 +7,14 @@ import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class ExamController {
+    def beforeInterceptor = [action:this.&checkUser]
+
+    def checkUser() {
+        if(!session.user) {
+            redirect(controller:'user',action:'login')
+            return false
+        }
+    }
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 

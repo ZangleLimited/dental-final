@@ -7,8 +7,16 @@ import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class CategoryController {
+    def beforeInterceptor = [action:this.&checkUser]
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+
+    def checkUser() {
+        if(!session.user) {
+            redirect(controller:'user',action:'login')
+            return false
+        }
+    }
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
