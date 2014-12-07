@@ -1,40 +1,10 @@
 <!DOCTYPE HTML>
-<!--
-	Strongly Typed by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Passdentistry - Take a test</title>
+    <h1 id="logo"><g:link action="index">Take a Test</g:link></h1>
 </head>
 <body class="homepage">
-
-<!-- Header -->
-<div id="header-wrapper">
-    <div id="header" class="container">
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li><g:link action="index" class="icon fa-home"><span>Introduction</span></g:link></li>
-                <li>
-                    <a href="" class="icon fa-sitemap"><span>Browse Categories</span></a>
-                    <ul>
-                        <g:each in="${categories}">
-                            <g:link action="test" id="${it.name}">${it.name}</g:link>
-                        </g:each>
-                    </ul>
-                </li>
-                <li><a class="icon fa-check-square-o" href="left-sidebar.html"><span>Take an Exam</span></a></li>
-                <li><a class="icon fa-at" href="no-sidebar.html"><span>Sign in</span></a></li>
-            </ul>
-        </nav>
-
-        <!-- Logo -->
-        <h1 id="logo"><g:link action="index">Take a Test</g:link></h1>
-    </div>
-</div>
 
 <!-- Main -->
 <div id="main-wrapper">
