@@ -8,4 +8,8 @@ class SiteController {
     def index() {
         [categories: Category.list()]
     }
+
+    def test() {
+        [categories: Category.list()]
+    }
 }

@@ -1,5 +1,4 @@
 import passdentistry.Admin
-import passdentistry.Admin
 
 class BootStrap {
 
