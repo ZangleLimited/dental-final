@@ -13,9 +13,25 @@
 
             <!-- Content -->
             <div id="content" class="8u">
+            <div id="list-question" class="content scaffold-list" role="main">
+                <table>
+                    <thead>
+                    <tr>
+                        <g:sortableColumn property="question" title="${message(code: 'question.question.label', default: 'Question')}" />
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <g:each in="${questionInstanceList}" status="i" var="questionInstance">
+                        <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
+                            <td><g:link action="show" id="${questionInstance.id}">${fieldValue(bean: questionInstance, field: "question")}</g:link></td>
 
+                        </tr>
+                    </g:each>
+                    </tbody>
+                </table>
 
+            </div>
             </div>
 
             <!-- Sidebar -->

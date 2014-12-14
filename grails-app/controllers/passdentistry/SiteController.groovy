@@ -14,10 +14,8 @@ class SiteController {
     }
 
     def takeTest() {
-        [categories: Category.list()]
+        def questions = Question.executeQuery('from Question order by rand()', [max: 10])
+        respond questions, model: [categories: Category.list(), questionInstanceCount: questions.size()]
     }
 
-    private def generateExam(){
-
-    }
 }
