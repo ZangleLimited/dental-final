@@ -9,7 +9,7 @@ class Admin {
     String toString() { "$email" }
 
     static constraints = {
-        email email: true
+        email email: true, unique: true
         password blank: false, password: true
     }
 }
