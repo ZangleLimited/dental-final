@@ -3,7 +3,6 @@
 <head>
     <meta name="layout" content="main"/>
     <h1 id="logo"><g:link action="index">Take a Test</g:link></h1>
-    <p>${params.id}</p>
 </head>
 <body class="homepage">
 
@@ -15,12 +14,7 @@
             <!-- Content -->
             <div id="content" class="8u">
 
-                <!-- Post -->
-                <article class="box post">
-                    <ul class="actions">
-                        <li><g:link class="button icon fa-file" action="takeTest" id="${params.id}">Take a test!</g:link></li>
-                    </ul>
-                </article>
+
 
             </div>
 

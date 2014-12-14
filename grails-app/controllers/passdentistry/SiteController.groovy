@@ -12,4 +12,12 @@ class SiteController {
     def test() {
         [categories: Category.list()]
     }
+
+    def takeTest() {
+        [categories: Category.list()]
+    }
+
+    private def generateExam(){
+
+    }
 }
