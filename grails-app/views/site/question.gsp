@@ -15,19 +15,18 @@
 
             <!-- Content -->
             <div id="content" class="8u">
-                <g:form url="[resource: site, action: 'nextQuestion']" method="PUT">
-                    <h3></h3>
+                <h3>${correctAnswers} correct answer<g:if test="${correctAnswers > 1}">s</g:if></h3>
 
+                <g:form url="[resource: site, action: 'nextQuestion']" method="PUT">
                     <div id="list-question" class="content scaffold-list" role="main">
                         <ul>
                             <g:each in="${question.answers}" var="answer">
                                 <li>
-                                    ${answer.answer}
+                                    <p><g:checkBox name="${answer.id.toString()}" /> ${answer.answer}</p>
                                 </li>
                             </g:each>
                         </ul>
                     </div>
-
                     <g:actionSubmit class="button icon fa-file" action="nextQuestion" value="Next"/>
                 </g:form>
             </div>

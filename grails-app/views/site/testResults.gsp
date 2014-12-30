@@ -19,9 +19,12 @@
 
                     <div id="list-question" class="content scaffold-list" role="main">
                         <ul>
-                            <g:each in="${questions}" var="question">
+                            <g:each in="${results}" var="result">
                                 <li>
-                                    ${question.question}
+                                    <g:if test="${result.isPass}">
+                                        <span class="icon fa-check-square-o"></span>
+                                    </g:if>
+                                    ${result.question.question}
                                 </li>
                             </g:each>
                         </ul>
