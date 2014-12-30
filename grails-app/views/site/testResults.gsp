@@ -2,8 +2,10 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <h1 id="logo"><g:link action="index">Take a Test</g:link></h1>
+
+    <h1>Results</h1>
 </head>
+
 <body class="homepage">
 
 <!-- Main -->
@@ -13,25 +15,18 @@
 
             <!-- Content -->
             <div id="content" class="8u">
-            <div id="list-question" class="content scaffold-list" role="main">
-                <table>
-                    <thead>
-                    <tr>
-                        <g:sortableColumn property="question" title="${message(code: 'question.question.label', default: 'Question')}" />
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <g:each in="${questionInstanceList}" status="i" var="questionInstance">
-                        <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+                    <h3></h3>
 
-                            <td><g:link action="show" id="${questionInstance.id}">${fieldValue(bean: questionInstance, field: "question")}</g:link></td>
+                    <div id="list-question" class="content scaffold-list" role="main">
+                        <ul>
+                            <g:each in="${questions}" var="question">
+                                <li>
+                                    ${question.question}
+                                </li>
+                            </g:each>
+                        </ul>
+                    </div>
 
-                        </tr>
-                    </g:each>
-                    </tbody>
-                </table>
-
-            </div>
             </div>
 
             <!-- Sidebar -->
@@ -46,8 +41,10 @@
                             <article class="box excerpt">
                                 <header>
                                     <span class="date">July 30</span>
+
                                     <h3><a href="#">Just another post</a></h3>
                                 </header>
+
                                 <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
                                 suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
                             </article>
@@ -59,8 +56,10 @@
                             <article class="box excerpt">
                                 <header>
                                     <span class="date">July 28</span>
+
                                     <h3><a href="#">And another post</a></h3>
                                 </header>
+
                                 <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
                                 suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
                             </article>
@@ -72,8 +71,10 @@
                             <article class="box excerpt">
                                 <header>
                                     <span class="date">July 24</span>
+
                                     <h3><a href="#">One more post</a></h3>
                                 </header>
+
                                 <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
                                 suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
                             </article>

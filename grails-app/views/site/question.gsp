@@ -2,9 +2,10 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <h1 id="logo"><g:link action="index">Take a Test</g:link></h1>
-    <p>${params.id}</p>
+
+    <h3>${question.question}</h3>
 </head>
+
 <body class="homepage">
 
 <!-- Main -->
@@ -14,14 +15,21 @@
 
             <!-- Content -->
             <div id="content" class="8u">
+                <g:form url="[resource: site, action: 'nextQuestion']" method="PUT">
+                    <h3></h3>
 
-                <!-- Post -->
-                <article class="box post">
-                    <ul class="actions">
-                        <li><g:link class="button icon fa-file" action="startTest" id="${params.id}">Take a test!</g:link></li>
-                    </ul>
-                </article>
+                    <div id="list-question" class="content scaffold-list" role="main">
+                        <ul>
+                            <g:each in="${question.answers}" var="answer">
+                                <li>
+                                    ${answer.answer}
+                                </li>
+                            </g:each>
+                        </ul>
+                    </div>
 
+                    <g:actionSubmit class="button icon fa-file" action="nextQuestion" value="Next"/>
+                </g:form>
             </div>
 
             <!-- Sidebar -->
@@ -36,8 +44,10 @@
                             <article class="box excerpt">
                                 <header>
                                     <span class="date">July 30</span>
+
                                     <h3><a href="#">Just another post</a></h3>
                                 </header>
+
                                 <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
                                 suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
                             </article>
@@ -49,8 +59,10 @@
                             <article class="box excerpt">
                                 <header>
                                     <span class="date">July 28</span>
+
                                     <h3><a href="#">And another post</a></h3>
                                 </header>
+
                                 <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
                                 suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
                             </article>
@@ -62,8 +74,10 @@
                             <article class="box excerpt">
                                 <header>
                                     <span class="date">July 24</span>
+
                                     <h3><a href="#">One more post</a></h3>
                                 </header>
+
                                 <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
                                 suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
                             </article>

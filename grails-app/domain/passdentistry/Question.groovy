@@ -4,6 +4,8 @@ class Question {
 
     static mapping = {
         question type: 'text'
+        answers lazy: false
+        category lazy: false
     }
 
     static constraints = {
