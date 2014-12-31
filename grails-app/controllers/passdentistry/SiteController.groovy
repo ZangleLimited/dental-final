@@ -23,23 +23,24 @@ class SiteController {
     }
 
     def nextQuestion() {
-        storeAnswers()
+        storeAnswersInSession()
 
         def questionsIndex = session.questionIndex++
         if (questionsIndex >= QUESTIONS_IN_TEST - 1) {
-            println "{session.answeredQuestions} = ${session.answeredQuestions}"
-
-            def results = []
-            session.questions.each {
-                results << new Result(question: it, isPass: isPass(it))
-            }
-
-            return render(view: "testResults", model: [results: results, categories: Category.list()])
+            return render(view: "testResults", model: [results: computeResults(), categories: Category.list()])
         }
         render view: "question", model: questionModel()
     }
 
-    def storeAnswers() {
+    private def computeResults() {
+        def results = []
+        session.questions.each {
+            results << new Result(question: it, isPass: isPass(it))
+        }
+        results
+    }
+
+    private def storeAnswersInSession() {
         def answers = [:]
         def question = session.questions[session.questionIndex]
         question.answers.each {
@@ -48,34 +49,26 @@ class SiteController {
         session.answeredQuestions.put(question.id, answers)
     }
 
-    def isPass(question) {
-        def passed = true
-        def id = question.id
-        println "id = $id"
-        println "session.answeredQuestions = ${session.answeredQuestions}"
-        def answered = session.answeredQuestions.get(id)
-        println "answered = $answered"
+    private def isPass(question) {
+        def answered = session.answeredQuestions.get(question.id)
         question.answers.each {
-            if (it.isCorrect && !answered.get(it.id)) {
-                passed = false
-            }
-            if (!it.isCorrect && answered.get(it.id)) {
-                passed = false
+            if (it.isCorrect && !answered.get(it.id) || !it.isCorrect && answered.get(it.id)) {
+                return false
             }
         }
-        passed
+        true
     }
 
-    class Result {
-        def question
-        def isPass
-    }
-
-    def questionModel() {
+    private def questionModel() {
         def question = session.questions[session.questionIndex]
         def correctAnswers = 0
         question.answers.each { if (it.isCorrect) correctAnswers++ }
         [categories: Category.list(), question: question, correctAnswers: correctAnswers]
+    }
+
+    private class Result {
+        def question
+        def isPass
     }
 
 }
