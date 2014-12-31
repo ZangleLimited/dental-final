@@ -9,4 +9,10 @@ class Category {
     static hasMany = [questions: Question, exams: Exam]
 
     String name
+
+    @Override
+    String toString(){
+        name
+    }
+
 }

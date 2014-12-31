@@ -15,4 +15,9 @@ class Answer {
 
     String answer
     Boolean isCorrect
+
+    @Override
+    String toString(){
+        answer
+    }
 }

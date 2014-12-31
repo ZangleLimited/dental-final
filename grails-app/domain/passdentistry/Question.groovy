@@ -16,4 +16,9 @@ class Question {
     static belongsTo = [category: Category]
 
     String question
+
+    @Override
+    String toString(){
+        question
+    }
 }
