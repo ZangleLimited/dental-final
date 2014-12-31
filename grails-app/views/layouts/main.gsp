@@ -3,7 +3,7 @@
 <head data-style="${asset.assetPath(src: 'style.css')}"
       data-style-desktop="${asset.assetPath(src: 'style-desktop.css')}"
       data-style-1000="${asset.assetPath(src: 'style-1000px.css')}"
-      data-sytle-mobile="${asset.assetPath(src: 'style-mobile.css')}">
+      data-style-mobile="${asset.assetPath(src: 'style-mobile.css')}">
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
