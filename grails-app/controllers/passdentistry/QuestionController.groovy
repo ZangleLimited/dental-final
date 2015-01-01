@@ -43,6 +43,12 @@ class QuestionController {
             return
         }
 
+        params.each { String key, value ->
+            if(key.startsWith("answer")){
+                questionInstance.addToAnswers(new Answer(answer: value, isCorrect: false))
+            }
+        }
+
         questionInstance.save flush: true
 
         request.withFormat {

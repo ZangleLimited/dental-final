@@ -24,6 +24,7 @@
     <ol class="property-list question">
 
         <g:if test="${questionInstance?.answers}">
+
             <li class="fieldcontain">
                 <span id="answers-label" class="property-label">Answers:</span>
                 <ul>
@@ -55,7 +56,7 @@
         <fieldset class="buttons">
             <g:actionSubmit class="delete" action="delete"
                             value="Delete"
-                            onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/>
+                            onclick="return confirm('Are you sure?');"/>
         </fieldset>
     </g:form>
 </div>

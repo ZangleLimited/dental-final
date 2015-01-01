@@ -22,8 +22,11 @@
                             <g:each in="${results}" var="result">
                                 <li>
                                     <g:if test="${result.isPass}">
-                                        <span class="icon fa-check-square-o"></span>
+                                        <span class="icon fa-check" style="color: green"></span>
                                     </g:if>
+                                    <g:else>
+                                        <span class="icon fa-close" style="color: red"></span>
+                                    </g:else>
                                     ${result.question.question}
                                 </li>
                             </g:each>
