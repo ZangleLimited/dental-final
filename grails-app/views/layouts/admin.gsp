@@ -40,6 +40,7 @@
                 </li>
                 <li><g:link controller="announcement" action="index" class="icon fa-home"><span>Announcements</span></g:link>
                 </li>
+                <li><g:link controller="customer" action="index" class="icon fa-home"><span>Customers</span></g:link></li>
                 <li><g:link controller="exam" action="index" class="icon fa-home"><span>Exams</span></g:link></li>
                 <li><g:link controller="admin" action="index" class="icon fa-home"><span>Admins</span></g:link></li>
             </ul>
