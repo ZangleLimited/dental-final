@@ -50,13 +50,14 @@ class SiteController {
     }
 
     private def isPass(question) {
+        def passed = true
         def answered = session.answeredQuestions.get(question.id)
         question.answers.each {
             if (it.isCorrect && !answered.get(it.id) || !it.isCorrect && answered.get(it.id)) {
-                return false
+                passed = false
             }
         }
-        true
+        passed
     }
 
     private def questionModel() {
