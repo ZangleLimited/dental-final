@@ -7,15 +7,12 @@
 </head>
 <body class="homepage">
 
-<!-- Main -->
 <div id="main-wrapper">
     <div id="main" class="container">
         <div class="row">
 
-            <!-- Content -->
             <div id="content" class="8u">
 
-                <!-- Post -->
                 <article class="box post">
                     <header>
                         <h2><a href="#">We want to help you <strong>succeed</strong> ...<br /></a></h2>
@@ -28,61 +25,15 @@
                         Our mock exams will give you fast feedback on how well you are doing. We can track how you are progressing over
                         time so you can feel confident you are moving towards your goal...
                     </p>
-                    <ul class="actions">
-                        <li><a href="#" class="button icon fa-file">Get Started</a></li>
-                    </ul>
+                    %{--<ul class="actions">--}%
+                        %{--<li><a href="#" class="button icon fa-file">Get Started</a></li>--}%
+                    %{--</ul>--}%
                 </article>
 
             </div>
 
-            <!-- Sidebar -->
             <div id="sidebar" class="4u">
-
-                <!-- Excerpts -->
-                <section>
-                    <ul class="divided">
-                        <li>
-
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <header>
-                                    <span class="date">July 30</span>
-                                    <h3><a href="#">Just another post</a></h3>
-                                </header>
-                                <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-                                suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-                            </article>
-
-                        </li>
-                        <li>
-
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <header>
-                                    <span class="date">July 28</span>
-                                    <h3><a href="#">And another post</a></h3>
-                                </header>
-                                <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-                                suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-                            </article>
-
-                        </li>
-                        <li>
-
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <header>
-                                    <span class="date">July 24</span>
-                                    <h3><a href="#">One more post</a></h3>
-                                </header>
-                                <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-                                suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-                            </article>
-
-                        </li>
-                    </ul>
-                </section>
-
+                <g:render template="announcements"/>
             </div>
 
         </div>

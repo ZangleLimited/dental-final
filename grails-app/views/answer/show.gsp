@@ -9,7 +9,7 @@
 <body>
 <div class="nav" role="navigation">
     <ul>
-    <li><g:link class="create" action="create">New</li></g:link>
+    <li><g:link class="create" action="create">Create</li></g:link>
         <li><g:link class="edit" action="edit" resource="${answerInstance}">Edit</g:link></li>
     </ul>
 </div>

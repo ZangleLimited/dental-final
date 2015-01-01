@@ -27,64 +27,12 @@
                             </g:each>
                         </ul>
                     </div>
-                    <g:actionSubmit class="button icon fa-file" action="nextQuestion" value="Next"/>
+                    <g:actionSubmit action="nextQuestion" value="Next"/>
                 </g:form>
             </div>
 
-            <!-- Sidebar -->
             <div id="sidebar" class="4u">
-
-                <!-- Excerpts -->
-                <section>
-                    <ul class="divided">
-                        <li>
-
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <header>
-                                    <span class="date">July 30</span>
-
-                                    <h3><a href="#">Just another post</a></h3>
-                                </header>
-
-                                <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-                                suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-                            </article>
-
-                        </li>
-                        <li>
-
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <header>
-                                    <span class="date">July 28</span>
-
-                                    <h3><a href="#">And another post</a></h3>
-                                </header>
-
-                                <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-                                suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-                            </article>
-
-                        </li>
-                        <li>
-
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <header>
-                                    <span class="date">July 24</span>
-
-                                    <h3><a href="#">One more post</a></h3>
-                                </header>
-
-                                <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-                                suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-                            </article>
-
-                        </li>
-                    </ul>
-                </section>
-
+                <g:render template="announcements"/>
             </div>
 
         </div>

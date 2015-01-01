@@ -6,13 +6,16 @@ import grails.transaction.Transactional
 class SiteController {
 
     private static final int QUESTIONS_IN_TEST = 10
+    private static final int MAX_ANNOUNCEMENTS = 10
 
     def index() {
-        [categories: categories()]
+        [categories: categories(), announcements: announcements()]
     }
 
+
+
     def test() {
-        [categories: categories()]
+        [categories: categories(), announcements: announcements()]
     }
 
     def startTest() {
@@ -61,11 +64,15 @@ class SiteController {
         passed
     }
 
+    private def announcements() {
+        Announcement.listOrderByDate([order: "desc", max: MAX_ANNOUNCEMENTS])
+    }
+
     private def questionModel() {
         def question = session.questions[session.questionIndex]
         def correctAnswers = 0
         question.answers.each { if (it.isCorrect) correctAnswers++ }
-        [categories: categories(), question: question, correctAnswers: correctAnswers]
+        [categories: categories(), question: question, correctAnswers: correctAnswers, announcements: announcements()]
     }
 
     private List<Category> categories() {

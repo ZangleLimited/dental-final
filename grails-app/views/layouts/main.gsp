@@ -44,8 +44,8 @@
                         </g:each>
                     </ul>
                 </li>
-                <li><a class="icon fa-check-square-o" href="left-sidebar.html"><span>Take an Exam</span></a></li>
-                <li><a class="icon fa-at" href="no-sidebar.html"><span>Sign in</span></a></li>
+                %{--<li><a class="icon fa-check-square-o" href="left-sidebar.html"><span>Take an Exam</span></a></li>--}%
+                %{--<li><a class="icon fa-at" href="no-sidebar.html"><span>Sign in</span></a></li>--}%
             </ul>
         </nav>
         <!-- Logo -->

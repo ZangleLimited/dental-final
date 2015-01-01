@@ -10,7 +10,7 @@
 <div class="nav" role="navigation">
     <ul>
         <li><g:link class="list" action="index">List</g:link></li>
-        <li><g:link class="create" action="create">New</g:link></li>
+        <li><g:link class="create" action="create">Create</g:link></li>
         <li><g:link class="edit" action="edit" resource="${questionInstance}">Edit</g:link></li>
     </ul>
 </div>

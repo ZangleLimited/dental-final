@@ -15,63 +15,14 @@
             <!-- Content -->
             <div id="content" class="8u">
 
-                <!-- Post -->
-                <article class="box post">
-                    <ul class="actions">
-                        <li><g:link class="button icon fa-file" action="startTest" params="[category: params.category]">Take a test!</g:link></li>
-                    </ul>
-                </article>
+                <h3>You are about to take a Test in ${params.category}</h3>
+
+                <g:link class="button" action="startTest" params="[category: params.category]">Start!</g:link>
 
             </div>
 
-            <!-- Sidebar -->
             <div id="sidebar" class="4u">
-
-                <!-- Excerpts -->
-                <section>
-                    <ul class="divided">
-                        <li>
-
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <header>
-                                    <span class="date">July 30</span>
-                                    <h3><a href="#">Just another post</a></h3>
-                                </header>
-                                <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-                                suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-                            </article>
-
-                        </li>
-                        <li>
-
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <header>
-                                    <span class="date">July 28</span>
-                                    <h3><a href="#">And another post</a></h3>
-                                </header>
-                                <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-                                suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-                            </article>
-
-                        </li>
-                        <li>
-
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <header>
-                                    <span class="date">July 24</span>
-                                    <h3><a href="#">One more post</a></h3>
-                                </header>
-                                <p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-                                suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-                            </article>
-
-                        </li>
-                    </ul>
-                </section>
-
+                <g:render template="announcements"/>
             </div>
 
         </div>
