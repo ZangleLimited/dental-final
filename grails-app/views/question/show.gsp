@@ -16,20 +16,12 @@
 </div>
 
 <div id="show-question" role="main">
-    <h1>Question</h1>
+    <h1><g:fieldValue
+            bean="${questionInstance}" field="question"/></h1>
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
     </g:if>
     <ol class="property-list question">
-
-        <g:if test="${questionInstance?.question}">
-            <li class="fieldcontain">
-                <span id="question-label" class="property-label">Question:</span>
-                <span class="property-value" aria-labelledby="question-label"><g:fieldValue
-                        bean="${questionInstance}" field="question"/></span>
-
-            </li>
-        </g:if>
 
         <g:if test="${questionInstance?.answers}">
             <li class="fieldcontain">
