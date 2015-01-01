@@ -15,7 +15,7 @@
                 e.preventDefault();
                 if(x < max_fields){ //max input box allowed
                     x++; //text box increment
-                    $(wrapper).append('<div><input type="text" name="answer-' + x + '"/><a style="display: inline; padding-left: 1em" href="#" class="remove_field icon fa-close"></a></div>'); //add input box
+                    $(wrapper).append('<div><input type="checkbox" name="isCorrect-answer-' + x + '"><input type="text" name="answer-' + x + '"/><a style="display: inline; padding-left: 1em" href="#" class="remove_field icon fa-close"></a></div>'); //add input box
                 }
             });
 
@@ -63,7 +63,7 @@
                 </label>
                 <div class="input_fields_wrap">
                     <a href="#" class="add_field_button icon fa-plus"></a>
-                    <div><input type="text" name="answer-1"></div>
+                    <div><input style="display: inline;" type="checkbox" name="isCorrect-answer-1"><input type="text" name="answer-1"></div>
                 </div>
             </div>
 

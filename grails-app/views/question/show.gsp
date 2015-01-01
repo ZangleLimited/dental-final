@@ -34,6 +34,12 @@
                                 <g:link controller="answer"
                                         action="show"
                                         id="${answer.id}">${answer?.encodeAsHTML()}</g:link></span>
+                            <g:if test="${answer.isCorrect}">
+                                <span class="icon fa-check" style="color: green"></span>
+                            </g:if>
+                            <g:else>
+                                <span class="icon fa-close" style="color: red"></span>
+                            </g:else>
                         </li>
                     </g:each>
                 </ul>

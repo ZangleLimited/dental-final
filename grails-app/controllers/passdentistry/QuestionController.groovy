@@ -45,7 +45,7 @@ class QuestionController {
 
         params.each { String key, value ->
             if(key.startsWith("answer")){
-                questionInstance.addToAnswers(new Answer(answer: value, isCorrect: false))
+                questionInstance.addToAnswers(new Answer(answer: value, isCorrect: params."isCorrect-$key" == "on"))
             }
         }
 
