@@ -7,12 +7,20 @@ import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class AnnouncementController {
+    def beforeInterceptor = [action: this.&checkUser]
+
+    def checkUser() {
+        if (!session.user) {
+            redirect(controller: 'admin', action: 'login')
+            return false
+        }
+    }
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Announcement.list(params), model:[announcementInstanceCount: Announcement.count()]
+        respond Announcement.list(params), model: [announcementInstanceCount: Announcement.count()]
     }
 
     def show(Announcement announcementInstance) {
@@ -31,11 +39,11 @@ class AnnouncementController {
         }
 
         if (announcementInstance.hasErrors()) {
-            respond announcementInstance.errors, view:'create'
+            respond announcementInstance.errors, view: 'create'
             return
         }
 
-        announcementInstance.save flush:true
+        announcementInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
@@ -58,18 +66,18 @@ class AnnouncementController {
         }
 
         if (announcementInstance.hasErrors()) {
-            respond announcementInstance.errors, view:'edit'
+            respond announcementInstance.errors, view: 'edit'
             return
         }
 
-        announcementInstance.save flush:true
+        announcementInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Announcement.label', default: 'Announcement'), announcementInstance.id])
                 redirect announcementInstance
             }
-            '*'{ respond announcementInstance, [status: OK] }
+            '*' { respond announcementInstance, [status: OK] }
         }
     }
 
@@ -81,14 +89,14 @@ class AnnouncementController {
             return
         }
 
-        announcementInstance.delete flush:true
+        announcementInstance.delete flush: true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'Announcement.label', default: 'Announcement'), announcementInstance.id])
-                redirect action:"index", method:"GET"
+                redirect action: "index", method: "GET"
             }
-            '*'{ render status: NO_CONTENT }
+            '*' { render status: NO_CONTENT }
         }
     }
 
@@ -98,7 +106,7 @@ class AnnouncementController {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'announcement.label', default: 'Announcement'), params.id])
                 redirect action: "index", method: "GET"
             }
-            '*'{ render status: NOT_FOUND }
+            '*' { render status: NOT_FOUND }
         }
     }
 }
