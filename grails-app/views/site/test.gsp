@@ -18,7 +18,7 @@
                 <!-- Post -->
                 <article class="box post">
                     <ul class="actions">
-                        <li><g:link class="button icon fa-file" action="startTest" id="${params.id}">Take a test!</g:link></li>
+                        <li><g:link class="button icon fa-file" action="startTest" params="[category: params.category]">Take a test!</g:link></li>
                     </ul>
                 </article>
 

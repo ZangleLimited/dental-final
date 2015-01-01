@@ -40,7 +40,7 @@
                     <a href="" class="icon fa-sitemap"><span>Browse Categories</span></a>
                     <ul>
                         <g:each in="${categories}">
-                            <g:link action="test" id="${it.name}">${it.name}</g:link>
+                            <g:link action="test"  params="[category: it.name]">${it.name}</g:link>
                         </g:each>
                     </ul>
                 </li>

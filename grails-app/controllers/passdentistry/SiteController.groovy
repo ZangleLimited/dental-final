@@ -8,15 +8,16 @@ class SiteController {
     private static final int QUESTIONS_IN_TEST = 10
 
     def index() {
-        [categories: Category.list()]
+        [categories: categories()]
     }
 
     def test() {
-        [categories: Category.list()]
+        [categories: categories()]
     }
 
     def startTest() {
-        session.questions = Question.executeQuery('from Question order by rand()', [max: QUESTIONS_IN_TEST])
+        def category = params.category
+        session.questions = Question.executeQuery('from Question where category.name = ? order by rand()', [category], [max: QUESTIONS_IN_TEST])
         session.questionIndex = 0
         session.answeredQuestions = [:]
         render view: "question", model: questionModel()
@@ -64,7 +65,11 @@ class SiteController {
         def question = session.questions[session.questionIndex]
         def correctAnswers = 0
         question.answers.each { if (it.isCorrect) correctAnswers++ }
-        [categories: Category.list(), question: question, correctAnswers: correctAnswers]
+        [categories: categories(), question: question, correctAnswers: correctAnswers]
+    }
+
+    private List<Category> categories() {
+        Category.executeQuery('from Category where questions.size >= ?', [QUESTIONS_IN_TEST])
     }
 
     private class Result {
